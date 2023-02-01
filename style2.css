@@ -2,7 +2,7 @@
 
 body { 
    background-color: rgb(241, 232, 191);
-   background-image: url(coin-mario.gif);
+   background-image: url("coin-mario.gif");
    background-repeat: repeat-y;
    background-size: 20%;
    background-position: 98%;
