@@ -9,6 +9,15 @@ const modalVideo = document.getElementById("modal-video");
 
 const closeBtn = document.getElementById("close-btn");
 
+function closeModal() {
+    modal.style.display = "none";
+    modalVideo.src = "";
+
+    images.forEach(image => {
+        image.style.border = ".75rem solid var(--secondary-color)";
+    });
+}
+
 images.forEach(image => {
 
     image.addEventListener("click", () => {
@@ -49,8 +58,25 @@ images.forEach(image => {
     
 });
 
-closeBtn.addEventListener("click", () => {
-    modal.style.display = "none";
-    modalVideo.src = "";
-    images.forEach(image => {image.style.border = ".75rem solid var(--secondary-color)";});
+closeBtn.addEventListener("click", closeModal);
+
+modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+        closeModal();
+    }
 });
+
+// closeBtn.addEventListener("click", () => {
+//     modal.style.display = "none";
+//     modalVideo.src = "";
+//     images.forEach(image => {image.style.border = ".75rem solid var(--secondary-color)";});
+// });
+// modal.addEventListener("click", (event) => {
+//     if (event.target === modal) {
+//         modal.style.display = "none";
+//         modalVideo.src = "";
+//         images.forEach(image => {
+//             image.style.border = ".75rem solid var(--secondary-color)";
+//         });
+//     }
+// });

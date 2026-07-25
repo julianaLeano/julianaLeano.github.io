@@ -44,24 +44,24 @@ box sizing border box: makes sure that padding and borders don't mess up size ca
  }
 
   h1 {
-    font-size: 2.5 rem;
+    font-size: 2.5rem;
  }
 
  h2 {
     font-size: 2rem;;
 }
 
+svg {
+    fill: var(--text-color);
+}
+
+/* *********************************************************************************************************************** */
  header {
     margin: 0 min(2em, 15%);
     width: 100%;
     background-color: var(--base-color);
-    padding: 0, min(2em, 15%);
-    /* give curves to all borders, VVV */
-    /*border-radius: 1em;*/
+    padding: 0 min(2em, 15%);
     text-align: center;
-
-    display: flex;
-    flex-direction:row;
  }
 
  /* 
@@ -77,6 +77,7 @@ box sizing border box: makes sure that padding and borders don't mess up size ca
 
  nav ul {
     display: flex;
+    justify-content: space-between; /* << to make sure links are on edges*/
     /* centers items vertically  */
     align-items: center; 
     list-style-type: none;
@@ -85,11 +86,10 @@ box sizing border box: makes sure that padding and borders don't mess up size ca
  }
 
  nav li:first-child {
-    margin-right: auto;
+    /*margin-right: auto;*/
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
  }
- 
 
  nav a{
     /* to remove underline by default, VVV */
@@ -97,35 +97,43 @@ box sizing border box: makes sure that padding and borders don't mess up size ca
     color: var(--text-color);
  }
 
- nav a:hover {
-    /*text-decoration: underline;*/
+ nav a:hover, .link-text:hover{
     color:var(--base-color);
  }
- 
+
 #nav-name {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size:2.5rem;
+    font-weight: 600;
+
 }
 
 #nav-sub {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size:1.5rem;
+    font-weight: 600;
+}
+
+.link-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-color);
 }
 
 .nav-button {
     display: inline-block;
     text-decoration: none;
     background-color: var(--primary-color);
-    padding: .75em 1.25em;
+    padding: .75em .75em;
     /*border-radius: .5em;*/
-    font-weight: 600;
     box-shadow: 0px 4px 6px var(--box-shadow);
-    font-size: 1.5rem;
 }
 
 .nav-button:hover {
     /*background-color: var(--text-color);*/
-    scale: 1.05
+    scale: 1.05;
+    color:var(--base-color);
+
 }
 
 
@@ -135,10 +143,14 @@ box sizing border box: makes sure that padding and borders don't mess up size ca
     margin: 0 min(2em, 15%);
     width: 100%;
     background-color: var(--base-color);
-    padding: min(2em, 15%);
+    padding: min(1em, 5%);
     /* give curves to all borders, VVV */
     /*border-radius: 1em;*/
     text-align: center;
+ }
+
+ .text-sections {
+    padding: 2em;
  }
 
  /* 
@@ -175,17 +187,20 @@ box sizing border box: makes sure that padding and borders don't mess up size ca
  */
  .text-container {
     flex: 0 1 34em;
+    background-color: var(--primary-color);
+    padding: 1.5em;
+    box-shadow: 0px 4px 6px var(--box-shadow);
  }
 
 
 .text-container p {
     margin: .75em 0 1em 0;
-    font-size: 1.25 rem;
+    font-size: 1.25rem;
  }
 
 section p {
     margin-top: 1em;
-    font-size: 1.25rem;
+    font-size: 1rem;
 }
 
 /* 
@@ -212,7 +227,7 @@ transition gives it a small hover effect
 */
 .grid-container img {
     height: 100%;
-    width: 100%;
+    width: 90%;
     /*border-radius: .5em;*/
     transition: 100ms ease;
     border: .75rem solid var(--secondary-color);
@@ -225,7 +240,7 @@ transition gives it a small hover effect
 }
 
 
-/* -------------------- MODAL THINGS --------------------*/
+/* ******************************************************************************************************************************************************************************** */
 /* FIXME I want to change the width to have a max percentage and minimum to what it is now
     and make sure still looks good on smaller screens
 */
@@ -254,23 +269,27 @@ transition gives it a small hover effect
     box-shadow: 0px 4px 6px var(--box-shadow);
 }
 
+.modal h3 {
+    padding-bottom: .5em;
+}
+
 
 .modal-text-style {
     background: var(--base-color);
-    padding: .5em;
+    padding: 1em;
     margin-bottom: 1em;
     text-align: left;
     box-shadow: 0px 4px 6px var(--box-shadow);
 }
 
 .modal-text-style h3 {
-    padding: 0 .5em .25em .5em;
+    /* padding: 0 .5em .25em .5em; */
     margin: 0;
     /*background-color: red;*/
 }
 
 .modal-text-style p {
-    padding-left: .5em;
+    /* padding-left: .5em; */
     margin: 0;
     /*background-color: blue;*/
 }
@@ -279,9 +298,10 @@ transition gives it a small hover effect
 .modal-content {
     background: rgb(var(--secondary-rgb) / 75%);
     padding: 1em;
-    /*border-radius: 10px;*/
-    max-width: 80%;
-    min-width: 50%;
+    width: 90%;             /* Scales nicely on small viewports */
+    max-width: 1200px;       /* Hard limit for large screens */
+    max-height: 85vh;       /* Prevents running off the screen bottom */
+    overflow-y: auto;       /* Adds an inner scrollbar if content is long */
     text-align: center;
     position: relative;
     box-shadow: 0px 4px 6px var(--box-shadow);
@@ -310,14 +330,15 @@ transition gives it a small hover effect
 /*had to finagle the padding amounts here to look good with bullets*/
 #modal-refs ul {
     text-align: left;
-    padding: 0 .5em .5em 2em;
+    padding-left: 2em;
     margin: 0;
+    font-size: 1rem;
     /*background-color: black;*/
 }
 
 #modal-refs a {
-    color: var(--primary-color);
-    text-decoration: none;
+    color: var(--secondary-color);
+    /*text-decoration: none;*/
 }
 
 #modal-refs a:hover {
@@ -341,15 +362,15 @@ transition gives it a small hover effect
 
 #close-btn:hover {
     /*background-color: var(--text-color);*/
-    scale: 1.1
+    scale: 1.1;
 }
-/* ------------------------------------------------------------------*/
 
+/* ******************************************************************************************************************************************************************************** */
 
 footer {
     padding: 1.5em 0;
     text-align: center;
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 footer a {
@@ -362,24 +383,29 @@ footer a:hover {
     text-decoration: underline;
 }
 
-
+/* ******************************************************************************************************************************************************************************** */
 /* RESPONSIVENESS THINGS, below for tablets and smartphones (988 bc when sections shift) */
 /*FIX ME: add additional max width area to change grid-container gap to 1em earlier 
 (test around to get px size)*/
 
+@media(max-width: 988px) {
+    header {
+        text-align: center;
+    }
+    header .text-container {
+        padding-top: 0;
+    }
+}
 
-/* 
-now even smaller, when nav links and etc start to collide 
-basically will only show first and last link, assumed to be most important
-could also build a menu button with collapsible sidebar but too advanced for current tutorial
-*/
-@media(max-width: 640px) {
+/* ******************************************************************************************************************************************************************************** */
+@media(max-width: 768px) {
     nav ul {
         display: flex;
+        flex-direction: column;
         /* centers items vertically  */
         align-items: center; 
         list-style-type: none;
-        gap: 2em;
+        gap: 1em;
         text-align: right;
     }
     
@@ -394,23 +420,27 @@ could also build a menu button with collapsible sidebar but too advanced for cur
         flex-direction:column;
     }
     .nav-button {
-        margin-top: .5em;
-        /*width: 75%;*/
+        /* margin-top: .5em; */
         padding: .5em;
+        text-align: center;
     }
+    
+    
     #nav-name {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size:1.5em;
+        font-size:2.5rem;
     }
     #nav-sub {
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        font-size:1em;
+        font-size:1.5rem;
+    }
+    .link-text {
+        font-size:1.5rem;
     }
     
     /* image grid diff responsiveness! */
     .grid-container {
         display: flex;
         flex-direction: column;
+        align-items: center;
         gap: 1em;
     }
     .text-container p {
@@ -422,46 +452,95 @@ could also build a menu button with collapsible sidebar but too advanced for cur
     .modal-content {
         max-width: 100%;
     }
-}
 
-@media(max-width: 988px) {
-    header {
+    .grid-container img {
+        width: 70%;
+    }
+}
+/* ******************************************************************************************************************************************************************************** */
+@media(max-width: 425px) {
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    section p, .text-container p, #modal-refs ul {
+        font-size: .7rem;
+    }
+
+    #nav-name {
+        font-size:1.5rem;
         text-align: center;
     }
-    header .text-container {
-        padding-top: 0;
-    }
-}
-
-@media(max-width: 425px) {
-    #nav-name {
+    
+    #nav-sub {
         font-size:1rem;
         text-align: center;
     }
     
-    #nav-sub {
-        font-size:.7rem;
-        text-align: center;
-    }
-
     .link-text {
-        font-size: 1rem;
+        font-size: .7rem;
         text-align: center;
-    }
-}
-
-/* up to 4k screens, make nav bar buttons and text bigger*/
-@media(min-width: 1500px) {
-    #nav-name {
-        font-size:2.5rem;
     }
     
-    #nav-sub {
-        font-size:1.5rem;
+    header {
+        margin: 0;
     }
     
     .nav-button {
-        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    section {
+        padding-top: 0;
+    }
+    
+    .grid-container {
+        margin-top: 0;
+    }
+
+    .grid-container img {
+        width: 80%;
+    }
+
+    .modal h3 {
+        font-size: 1rem;
+    }
+
+    svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    .text-container {
+        padding:.5em;
+    }
+    
+}
+/* ******************************************************************************************************************************************************************************** */
+/* up to 4k screens, make nav bar buttons and text bigger*/
+@media(min-width: 1500px) {
+    h2 {
+        font-size: 3rem;
+    }
+    
+    p {
+        font-size: 1.25em;
+    }
+
+    #nav-name {
+        font-size:4.5rem;
+    }
+    
+    #nav-sub {
+        font-size:2.5rem;
+    }
+    
+    .link-text {
+        font-size: 2.5rem;
+    }
+    
+    .nav-button {
+        padding: .75em 2.75em;
     }
     
     svg {
@@ -469,7 +548,19 @@ could also build a menu button with collapsible sidebar but too advanced for cur
         height: 30px;
     }
     
+    .modal-content {
+        padding: 2.5em;
+    }
+    
+    .modal h3 {
+        font-size: 2rem;
+    }
+    
+    #modal-refs ul {
+        font-size: 1.25em;
+    }
+    
     footer {
-        font-size: 2em;
+        font-size: 2rem;
     }
 }
