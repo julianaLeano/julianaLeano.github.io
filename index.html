@@ -1,151 +1,218 @@
 <!DOCTYPE html>
-<html>
-   <head> <!-- metadata, title appears on browser tab -->
-      <title>Juliana Leano</title>
-      <link rel="stylesheet" type="text/css" href="style.css"></link>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Juliana Leano Portfolio</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <!-- <link rel="stylesheet" href="styleSheetNew.css"> -->
+        <!-- <link rel="stylesheet" href="styleSheetOld.css"> -->
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <!-- connect js file!-->
+        <script src="script.js" async defer></script>
+        
+        
+        <!--_____________________________________________________________________________________________________________-->
+        <header>
+           <nav>
+            <ul>
+                <li><a href="#" class="nav-button">
+                    <span id="nav-name">Juliana Leano</span><br> <span id="nav-sub">Creative Portfolio</span></a></li>
 
-      <script>
-         function changeStyle(){
-            var curStyle = document.getElementsByTagName('link')[0];
+                <li><a href="#" class="nav-button">
+                  <span class="link-text">Contact Me </span>
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -130 640 640" width="20" height="20">
+                      <!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                      <path 
+                          fill="currentColor"
+                          d="M112 128C85.5 128 64 149.5 64 176C64 191.1 71.1 205.3 83.2 214.4L291.2 370.4C308.3 
+                          383.2 331.7 383.2 348.8 370.4L556.8 214.4C568.9 205.3 576 191.1 576 176C576 149.5 554.5 
+                          128 528 128L112 128zM64 260L64 448C64 483.3 92.7 512 128 512L512 512C547.3 512 576 483.3 
+                          576 448L576 260L377.6 408.8C343.5 434.4 296.5 434.4 262.4 408.8L64 260z"/>
+                  </svg>
+                </a></li>
+                <!--^^ will be mailto link -->
+            </ul>
+           </nav>
+           
+        
+        </header>
+        <!--</section>-->
+        
+        <!--_____________________________________________________________________________________________________________-->
+        <section id="section-videos">
+            <!--<h2>some of my best work :D</h2>-->
+            <!-- 
+            grid-area gives names/identifiers to each grid area to position them in grid later 
+            -->
+            <div class="grid-container">
+                <img class="gallery-img" 
+                    style="grid-area: img-1" 
+                    src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeW1yZDkxM3Q3MGVvMmFoa3A3cDI4dXo5a25rNXIzanJucDJxdmIzNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qJK7q7K91dFEAOWled/giphy.gif" 
+                    alt="mark is happy"
+                    data-title= "video title"
+                    data-descr= "the description for the video. explaining my reasonsing and intention text text text text text text text text text text text text text text text text text text text text"
+                    data-refs= '[
+                            {
+                                "name": "OpenWeather API",
+                                "url": "https://openweathermap.org/"
+                            },
+                            {
+                                "name": "Font Awesome Icons",
+                                "url": "https://fontawesome.com/"
+                            }
+                        ]'
+                    data-video="dQw4w9WgXcQ"
+                    >
+                <img class="gallery-img" 
+                    style="grid-area: img-2" 
+                    src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeW1yZDkxM3Q3MGVvMmFoa3A3cDI4dXo5a25rNXIzanJucDJxdmIzNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qJK7q7K91dFEAOWled/giphy.gif" 
+                    alt="mark is happy"
+                    data-title= "video title"
+                    data-descr= "descrition 2 text text"
+                    data-refs= '[
+                            {
+                                "name": "OpenWeather API",
+                                "url": "https://openweathermap.org/"
+                            },
+                            {
+                                "name": "Font Awesome Icons",
+                                "url": "https://fontawesome.com/"
+                            }
+                        ]'
+                    data-video="dQw4w9WgXcQ"
+                    >
+                <img class="gallery-img" 
+                    style="grid-area: img-3" 
+                    src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeW1yZDkxM3Q3MGVvMmFoa3A3cDI4dXo5a25rNXIzanJucDJxdmIzNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qJK7q7K91dFEAOWled/giphy.gif" 
+                    alt="mark is happy"
+                    data-title= "video title"
+                    data-descr= "descrition 3 text text text text text text text text text text text text text text text text text text text text"
+                    data-refs= '[
+                            {
+                                "name": "OpenWeather API",
+                                "url": "https://openweathermap.org/"
+                            },
+                            {
+                                "name": "Font Awesome Icons",
+                                "url": "https://fontawesome.com/"
+                            }
+                        ]'
+                    data-video="dQw4w9WgXcQ"
+                    >
+                <img class="gallery-img" 
+                    style="grid-area: img-4" 
+                    src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeW1yZDkxM3Q3MGVvMmFoa3A3cDI4dXo5a25rNXIzanJucDJxdmIzNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qJK7q7K91dFEAOWled/giphy.gif" 
+                    alt="mark is happy"
+                    data-title= "video title"
+                    data-descr= "descrition 4 text text text text text text text text text text text text text text text text text text text text"
+                    data-refs= '[
+                            {
+                                "name": "OpenWeather API",
+                                "url": "https://openweathermap.org/"
+                            },
+                            {
+                                "name": "Font Awesome Icons",
+                                "url": "https://fontawesome.com/"
+                            }
+                        ]'
+                    data-video="dQw4w9WgXcQ"
+                    >
+                <img class="gallery-img" 
+                    style="grid-area: img-5" 
+                    src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeW1yZDkxM3Q3MGVvMmFoa3A3cDI4dXo5a25rNXIzanJucDJxdmIzNiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/qJK7q7K91dFEAOWled/giphy.gif" 
+                    alt="mark is happy"
+                    data-title= "video title"
+                    data-descr= "descrition 5 text text text text text text text text text text text text text text text text text text text text"
+                    data-refs= '[
+                            {
+                                "name": "OpenWeather API",
+                                "url": "https://openweathermap.org/"
+                            },
+                            {
+                                "name": "Font Awesome Icons",
+                                "url": "https://fontawesome.com/"
+                            }
+                        ]'
+                    data-video="dQw4w9WgXcQ"
+                    >
 
-            if(curStyle.getAttribute('href') == 'style.css')
-            {
-               curStyle.setAttribute('href', 'style2.css');
-            } else {
-               curStyle.setAttribute('href', 'style.css');
-            }
-         }
-      </script>
+            </div>
+            <!--<a href="" class="cta-button">More on my SOCIAL MEDIA :3</a>-->
+            
+            <!-- Modal! aka popup for gallery-->
+            <div id="lightbox" class="modal">
+                <div class="modal-content">
+                    
+                    <!--<img id="modal-img" src="" alt="" />-->
+                    <div class="video-container">
+                        <iframe
+                            id="modal-video"
+                            width="100%"
+                            height="400"
+                            src=""
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    
+                    <h2 id="modal-title"></h2>
+                    <div class="modal-text-style">
+                        <h3>Description!!</h3>
+                        <p id="modal-descr"></p>
+                    </div>
+                    
+                    <div class="modal-text-style">
+                        <h3>References!!</h3>
+                        <div id="modal-refs"></div>
+                    </div>
+                    
+                    <button type="button" id="close-btn">
+                        <svg 
+                            xmlns="http://www.w3.org/2000/svg" 
+                            viewBox="0 0 640 640" width="20" height="20">
+                            <!--!Font Awesome Free v7.3.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+                            <path 
+                                d="M96 160C78.3 160 64 174.3 64 192C64 209.7 78.3 224 96 224L304 
+                                224L304 160L96 160zM256 352C238.3 352 224 366.3 224 384C224 401.7 
+                                238.3 416 256 416L320 416C337.7 416 352 401.7 352 384C352 366.3 
+                                337.7 352 320 352L256 352zM192 288C192 305.7 206.3 320 224 320L272 
+                                320C289.7 320 304 305.7 304 288C304 270.3 289.7 256 272 256L224 
+                                256C206.3 256 192 270.3 192 288zM288 448C270.3 448 256 462.3 256 
+                                480C256 497.7 270.3 512 288 512L352 512C369.7 512 384 497.7 384 
+                                480C384 462.3 369.7 448 352 448L288 448zM376 352L375.4 352C380.8 
+                                361.4 384 372.3 384 384C384 397.2 380 409.4 373.2 419.6C398.1 428.3 
+                                416 452.1 416 480C416 491.7 412.9 502.6 407.4 512L416 512C504.4 512 
+                                576 440.4 576 352L576 290.3C576 247.9 559.1 207.2 529.1 177.2L517.5 
+                                165.6C493.5 141.5 460.9 128 427 128L400 128C364.7 128 336 156.7 336 
+                                192L336 280C336 302.1 353.9 320 376 320C398.1 320 416 302.1 416 
+                                280L416 224C416 215.2 423.2 208 432 208C440.8 208 448 215.2 448 
+                                224L448 280C448 319.8 415.8 352 376 352z"
+                            />
+                        </svg>
+                        <span class="link-text">Back</span>
+                    </button>
+                    
+                </div>
+            </div>
+            
+        </section>
+        <!--_____________________________________________________________________________________________________________-->
 
-   </head>
-   <body>
-      <!-- mainTitle class or h1 -->
-      <div class = "mainTitle"> <h1>{ Juliana Leano }</h1> </div>
+        <footer>
+            <a href="">SOCIAL MEADIA 1</a>
+            <a href="#my-work">my work :D</a>
+            <a href="">SOCIAL MEADIA 3</a>
+        </footer>
+        <!--_____________________________________________________________________________________________________________-->
 
-      <!-- simple background class? same size? for color behind measures-->
-         <!-- preamble class with measures as background and paragraphs of
-         text that are centered in between the measures in the background-->
-      <div class = "bkgColor">
-         <div class = "preamble"> 
-            <p> Howdy, my name is Juliana Leano and I am a senior engineering computer science major at 
-               Texas A&M University. I have always loved music, whether it be through dancing from ballet 
-               to zumba, through playing an instrument, like the cello and piano, or going to concerts and 
-               taking it all in. I have also always been fascinated with video games, both how they work and 
-               the creativity that goes into bringing them to life. 
-            </p>
-               
-            <p> Along with playing instruments, I was in several different orchestras, ranging from beginner 
-               to professional enough to compete with other students. Playing in an orchestra is almost a completely
-               different endeavour to playing alone. It requires not only knowing, and in some cases memorizing, your
-               part of the piece, it also demands intense concentration, the ability to communicate clearly and quickly
-               with the other players around you, the ability to follow the conductor or the first chair even if they 
-               change something the day of the performance, and the skill to know how and where you fit in with the rest 
-               of the orchestra. 
-            </p>
-         </div>
-      </div>
-
-
-      <!-- h2 or subtitle -->
-      <div class = "subtitle"> 
-         <div class = "sub1">
-            <h2> Technical Portfolio </h2>
-         </div>
-      </div>
-
-      <!-- summary class with multiple paragraph tags enclosed in simple color background -->
-      <div class = "summary">
-         <div class="sum1">
-            <p>
-               Of the past projects I have completed, one that gave me some trouble but also ended up being a very interesting project to 
-               work on was a Seam Carving program. The process of <a href="https://en.wikipedia.org/wiki/Seam_carving">Seam Carving</a> is a program
-               that is able to find the most important, or parts most people would care about the most, parts of an image and allow for someone
-               to rescale their image with minimal warping. It does this by finding some seams, or paths of pixels that are deemed unimportant and
-               either removes or adds to them depending on how the user wants to resize the image. This allows for images to be resized with different
-               ratios from the original image and minimizes how distorted they get. While difficult in the beginning, starting to understand the process
-               and how to code it out greatly helped me learn how to think about and process much larger coding assignments than I was used to.
-            </p>
-            <p>
-               For a project I would like to complete in the future, I am very interested in making a website of some sort that is able to hold and 
-               organize large amounts of information for the sake of archival. Some of the features would be easy access, highly organized group of 
-               information and the ability to sort that information in many different ways with different topics or connections. I would want both the 
-               design and the code to be able to support and store several varying types of information and media, like podcasts and more audio based
-               products, videos, images, tweets, blogs, and more. I would also want to implement a tagging system where different pieces of media can 
-               be tagged for easy search as well as for the ability to include or exclude certain tags from search to help users find information 
-               as specific as they want as easily as possible, especially if it exists scattered about the internet.  
-            </p>
-         </div>
-      </div>
-
-      <!-- sub summary class for github link (centered below the summary block) -->
-      <div class="subSummary"> 
-         <div class="subSum1">
-            <a href="https://github.com/julianaLeano/">Github link</a>
-         </div>
-      </div>
-
-
-      <!-- h2 or subtitle -->
-      <div class = "subtitle"> 
-         <div class = "sub2">
-            <h2> Qualifications </h2>
-         </div>
-      </div>
-
-      <!-- sub summary class for resume pdf/google drive link (centered below the title block)-->
-      <div class="subSummary"> 
-         <div class="subSum2">
-            <a href="https://drive.google.com/file/d/1pRMS-fDzdQs0bsk2P18NdB5jgbF5BbcF/view?usp=sharing">Resume</a>
-         </div>
-      </div>
-      
-      <!-- summary class with text enclosed in simple color background -->
-      <div class = "summary">
-         <div class="sum2">
-            <p> I am proficient in <a href = "https://www.cplusplus.com/">C++</a>, <a href="https://www.haskell.org/">Haskell</a>, 
-               as well as in <a href= "https://en.wikipedia.org/wiki/Java ">Java</a>. I additionally have had experience in html, 
-               Python, and HDL.
-            </p>
-            <p> I currently do not have a singular interest for where I want to focus in computer science, however what I have seen
-               from computer graphics and game design appeals to me. I am still learning about the field of computing, and the main 
-               interest I do have is I would love to work in something that challenges me not only intellectually but also creatively.
-            </p>
-         </div>
-      </div>
-
-
-      <!-- h2 or subtitle -->
-      <div class = "subtitle"> 
-         <div class = "sub3">
-            <h2> Service </h2>
-         </div>
-         
-      </div>
-
-      <!-- summary class with text enclosed in simple color background -->
-      <div class = "summary">
-         <div class="sum3">
-            <p>In the past, I have volunteered at food pantries as well as 
-               <a href="https://catholiccharities.org/our-services/promoting-independence-for-seniors-veterans-others/senior-services/mamie-george-community-center/">organizations</a> 
-               that help people with daily supplies when they are in a situation where they can't afford them, 
-               such as losing a job or a house. For example, after hurricane Harvey I helped pack and organize food, clothing, and 
-               supplies for people that have lost their homes in the destruction. 
-            </p>
-            <p> I also volunteer at my local library back home and work with the children there. Libraries and maintaining them are very important to me as they are vital 
-               for so many people as a source of  
-               <a href ="http://publiclibrariesonline.org/2013/04/community-centered-23-reasons-why-your-library-is-the-most-important-place-in-town/">education, safety, and a place to work.</a>   
-            </p>
-            <p> In high school, when I had more time, I also helped build decks and stairs for free as a part of an organization called 
-               <a href="https://faithinactionofbrazosport.org/">Faith in Action </a>for families that needed them and did not have the funds to pay for them. 
-               I would love to work on a <a href="https://www.habitat.org/emea">Habitat for Humanity</a> house in the future but haven't been able to join one yet due to time. </p>
-   
-         </div>
-      </div>
-
-      <div class = "changeStyle">
-         <h3> Click below to change themes </h3>
-         <button onclick="changeStyle()"> Change Style </button>
-      </div>
-
-   </body>
+    </body>
 </html>
