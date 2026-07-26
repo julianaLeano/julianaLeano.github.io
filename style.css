@@ -448,7 +448,7 @@ footer a:hover {
         font-size: 1.5rem;
     }
     .modal-content {
-        max-width: 100%;
+        max-width: 85%;
     }
 
     .grid-container img {
@@ -476,7 +476,7 @@ footer a:hover {
     }
     
     .link-text {
-        font-size: .7rem;
+        font-size: 1rem;
         text-align: center;
     }
     
@@ -511,6 +511,14 @@ footer a:hover {
 
     .text-container {
         padding:.5em;
+    }
+
+    .text-sections {
+        padding: 1em;
+    }
+
+    #close-btn {
+        width: 50%;
     }
     
 }
@@ -556,6 +564,12 @@ footer a:hover {
     
     #modal-refs ul {
         font-size: 1.25em;
+    }
+
+    .grid-container img {
+        /* quick fix, at 4k bottom row of gifs gets cut off, don't know why yet 
+        does squish gifs a lil but hardly noticable... I hope*/
+        height: 96%;
     }
     
     footer {
