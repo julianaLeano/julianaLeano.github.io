@@ -29,7 +29,7 @@ images.forEach(image => {
         // modalImg.alt = image.alt;
         modalVideo.src = `https://www.youtube.com/embed/${image.dataset.video}`;
         
-        title.textContent = image.alt;
+        title.textContent = image.dataset.title;
         description.textContent = image.dataset.descr;
         
         // clear old references just in case I guess
@@ -44,12 +44,16 @@ images.forEach(image => {
         referenceList.forEach(reference => {
             const li = document.createElement("li");
             const link = document.createElement("a");
-    
-            link.textContent = reference.name;
-            link.href = reference.url;
-            link.target = "_blank";
-    
-            li.appendChild(link);
+            
+            if (reference.url) {
+                link.textContent = reference.name;
+                link.href = reference.url;
+                link.target = "_blank";
+        
+                li.appendChild(link);
+            } else {
+                li.textContent = reference.name;
+            }
             ul.appendChild(li);
         });
         
@@ -65,18 +69,3 @@ modal.addEventListener("click", (event) => {
         closeModal();
     }
 });
-
-// closeBtn.addEventListener("click", () => {
-//     modal.style.display = "none";
-//     modalVideo.src = "";
-//     images.forEach(image => {image.style.border = ".75rem solid var(--secondary-color)";});
-// });
-// modal.addEventListener("click", (event) => {
-//     if (event.target === modal) {
-//         modal.style.display = "none";
-//         modalVideo.src = "";
-//         images.forEach(image => {
-//             image.style.border = ".75rem solid var(--secondary-color)";
-//         });
-//     }
-// });

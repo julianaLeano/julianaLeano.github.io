@@ -11,7 +11,7 @@ boom mind blown what
     --secondary-rgb: 47 157 144;
     --color-1: #ea9230;
     --color-2: #d43c36;
-    --color-3: #bd0ad8;
+    --color-3: #0f0c3f;
     --box-shadow: rgba(0, 0, 0, 0.5);
 }
 
@@ -52,7 +52,7 @@ box sizing border box: makes sure that padding and borders don't mess up size ca
 }
 
 svg {
-    fill: var(--text-color);
+    fill: currentColor;
 }
 
 /* *********************************************************************************************************************** */
@@ -97,9 +97,9 @@ svg {
     color: var(--text-color);
  }
 
- nav a:hover, .link-text:hover{
+ /* nav a:hover, .link-text:hover{
     color:var(--base-color);
- }
+ } */
 
 #nav-name {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -117,7 +117,7 @@ svg {
 .link-text {
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--text-color);
+    color: inherit; /* to not override button color and so that hover change works*/
 }
 
 .nav-button {
@@ -136,9 +136,7 @@ svg {
 
 }
 
-
-
- section {
+section {
     /* margin: min(2em, 15%) 0; <<< different */
     margin: 0 min(2em, 15%);
     width: 100%;
@@ -147,7 +145,7 @@ svg {
     /* give curves to all borders, VVV */
     /*border-radius: 1em;*/
     text-align: center;
- }
+}
 
  .text-sections {
     padding: 2em;
@@ -358,11 +356,13 @@ transition gives it a small hover effect
     font-weight: 600;
     box-shadow: 0px 4px 6px var(--box-shadow);
     border: none;
+    color: var(--text-color);
 }
 
 #close-btn:hover {
     /*background-color: var(--text-color);*/
     scale: 1.1;
+    color: var(--base-color);
 }
 
 /* ******************************************************************************************************************************************************************************** */
